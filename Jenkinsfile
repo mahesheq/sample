@@ -1,9 +1,19 @@
 pipeline {
-  agent any
+  agent none
   stages {
     stage('Project 1') {
       steps {
-        bat(script: '@echo on echo This is file 01 echo ---------------- @echo off', returnStatus: true, returnStdout: true)
+        echo 'Print Message 1'
+      }
+    }
+    stage('Project 2') {
+      steps {
+        echo 'Message 2'
+      }
+    }
+    stage('Project 3') {
+      steps {
+        echo 'Message 3'
       }
     }
   }
